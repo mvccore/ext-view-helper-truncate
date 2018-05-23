@@ -11,7 +11,7 @@
  * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
-namespace MvcCore\Ext\View\Helpers;
+namespace MvcCore\Ext\Views\Helpers;
 
 /**
  * Responsibility - truncate plain text or text with html tags to max. chars.
@@ -20,7 +20,7 @@ namespace MvcCore\Ext\View\Helpers;
  *   html entity `&hellip;` by default, for plain text `...` by default.
  * - Possibility to set default truncating method, if third param to define is not set.
  */
-class Truncate extends \MvcCore\Ext\View\Helpers\AbstractHelper
+class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Assets - version:
@@ -37,7 +37,7 @@ class Truncate extends \MvcCore\Ext\View\Helpers\AbstractHelper
 	 *		->SetThreeDotsText('&hellip;', TRUE)
 	 *		->SetThreeDotsText('...', FALSE)
 	 *		->SetAlwaysHtmlMode();`
-	 * @var \MvcCore\Ext\View\Helpers\Truncate
+	 * @var \MvcCore\Ext\Views\Helpers\Truncate
 	 */
 	protected static $instance;
 
@@ -64,7 +64,7 @@ class Truncate extends \MvcCore\Ext\View\Helpers\AbstractHelper
 	 * for text mode `...`.
 	 * @param string $threeDotsText
 	 * @param bool   $forHtmlText
-	 * @return \MvcCore\Ext\View\Helpers\Truncate
+	 * @return \MvcCore\Ext\Views\Helpers\Truncate
 	 */
 	public function & SetThreeDotsText ($threeDotsText = '&hellip;', $forHtmlText = TRUE) {
 		$this->threeDotsTexts[$forHtmlText ? 1 : 0] = $threeDotsText;
@@ -75,7 +75,7 @@ class Truncate extends \MvcCore\Ext\View\Helpers\AbstractHelper
 	 * Setup helper to use always html mode truncating
 	 * if there is not set third param tu use forcely html or text mode.
 	 * @param bool $alwaysHtmlMode
-	 * @return \MvcCore\Ext\View\Helpers\Truncate
+	 * @return \MvcCore\Ext\Views\Helpers\Truncate
 	 */
 	public function & SetAlwaysHtmlMode ($alwaysHtmlMode = TRUE) {
 		$this->alwaysHtmlMode = $alwaysHtmlMode;
