@@ -47,7 +47,7 @@ class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * for truncated html `&hellip;` by default and for text `...` by default.
 	 * @var string[]|NULL[]
 	 */
-	protected $threeDotsTexts = array(NULL, NULL);
+	protected $threeDotsTexts = [NULL, NULL];
 
 	/**
 	 * If `TRUE`, texts will be truncated in html mode,
@@ -118,7 +118,7 @@ class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * @return string
 	 */
 	protected function truncateHtml (& $text, $maxChars) {
-		$texts = array();
+		$texts = [];
 		$index = 0;
 		$charsCount = 0;
 		// explode all html content to array with text ocontents and html tags
@@ -127,14 +127,14 @@ class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 			if ($openTagPos === FALSE) {
 				$subText = mb_substr($text, $index);
 				$subText = preg_replace("#\s+#", ' ', str_replace('&nbsp;', ' ', $subText));
-				$texts[] = array(TRUE, $subText, $charsCount, mb_strlen($subText));
+				$texts[] = [TRUE, $subText, $charsCount, mb_strlen($subText)];
 				break;
 			}
 			$closeTagPos = mb_strpos($text, '>', $openTagPos + 1);
 			if ($closeTagPos === FALSE) {
 				$subText = mb_substr($text, $index);
 				$subText = preg_replace("#\s+#", ' ', str_replace('&nbsp;', ' ', $subText));
-				$texts[] = array(TRUE, $subText, $charsCount, mb_strlen($subText));
+				$texts[] = [TRUE, $subText, $charsCount, mb_strlen($subText)];
 				break;
 			}
 			$subText = mb_substr($text, $index, $openTagPos - $index);
@@ -143,9 +143,9 @@ class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 			$subTextLength = mb_strlen($subText);
 			$subTagLength = mb_strlen($subTag);
 			if ($subTextLength > 0)
-				$texts[] = array(TRUE, $subText, $charsCount, $subTextLength);
+				$texts[] = [TRUE, $subText, $charsCount, $subTextLength];
 			if ($subTagLength > 0)
-				$texts[] = array(FALSE, $subTag, 0, $subTagLength);
+				$texts[] = [FALSE, $subTag, 0, $subTagLength];
 			$charsCount += $subTextLength;
 			if ($charsCount >= $maxChars) break;
 			$index = $closeTagPos + 1;
