@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/ext-view-helper-truncate",
 	"type": "library",
-	"description": "MvcCore Extension - View Helper - Truncate - truncate plain text or text with html tags to max. chars.",
+	"description": "MvcCore - Extension - View - Helper - Truncate - truncate plain text or text with html tags to max. chars.",
 	"keywords": [
 		"mvc", 
 		"mvccore", 
