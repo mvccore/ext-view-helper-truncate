@@ -20,7 +20,7 @@ namespace MvcCore\Ext\Views\Helpers;
  *   html entity `&hellip;` by default, for plain text `...` by default.
  * - Possibility to set default truncating method, if third param to define is not set.
  */
-class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
+class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Assets - version:
@@ -37,7 +37,7 @@ class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 *		->SetThreeDotsText('&hellip;', TRUE)
 	 *		->SetThreeDotsText('...', FALSE)
 	 *		->SetAlwaysHtmlMode();`
-	 * @var \MvcCore\Ext\Views\Helpers\Truncate
+	 * @var \MvcCore\Ext\Views\Helpers\TruncateHelper
 	 */
 	protected static $instance;
 
@@ -64,7 +64,7 @@ class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * for text mode `...`.
 	 * @param string $threeDotsText
 	 * @param bool   $forHtmlText
-	 * @return \MvcCore\Ext\Views\Helpers\Truncate
+	 * @return \MvcCore\Ext\Views\Helpers\TruncateHelper
 	 */
 	public function & SetThreeDotsText ($threeDotsText = '&hellip;', $forHtmlText = TRUE) {
 		$this->threeDotsTexts[$forHtmlText ? 1 : 0] = $threeDotsText;
@@ -75,7 +75,7 @@ class Truncate extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * Setup helper to use always html mode truncating
 	 * if there is not set third param tu use forcely html or text mode.
 	 * @param bool $alwaysHtmlMode
-	 * @return \MvcCore\Ext\Views\Helpers\Truncate
+	 * @return \MvcCore\Ext\Views\Helpers\TruncateHelper
 	 */
 	public function & SetAlwaysHtmlMode ($alwaysHtmlMode = TRUE) {
 		$this->alwaysHtmlMode = $alwaysHtmlMode;
