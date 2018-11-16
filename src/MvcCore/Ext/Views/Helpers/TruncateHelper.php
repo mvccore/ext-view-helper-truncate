@@ -24,7 +24,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Assets - version:
-	 * Comparation by PHP function version_compare();
+	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
 	const VERSION = '5.0.0-alpha';
@@ -59,7 +59,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 
 	/**
 	 * Set three dots custom chars - `...` or `&hellip;`,
-	 * for html mode or diferent for text mode.
+	 * for html mode or different for text mode.
 	 * There is used by default for html mode `&hellip;` and
 	 * for text mode `...`.
 	 * @param string $threeDotsText
@@ -92,7 +92,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 *							If `FALSE`, first param will be forcely truncated in text mode,
 	 *							If `NULL`, there is used possibly configured property
 	 *							`\MvcCore\Ext\View\Helpers\::$alwaysHtmlMode` and if not configured,
-	 *							there is automaticly detected if first param contains any html tag(s).
+	 *							there is automatically detected if first param contains any html tag(s).
 	 * @return string
 	 */
 	public function Truncate ($text, $maxChars = 200, $isHtml = NULL) {
