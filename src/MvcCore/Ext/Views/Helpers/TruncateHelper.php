@@ -73,7 +73,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 
 	/**
 	 * Setup helper to use always html mode truncating
-	 * if there is not set third param tu use forcely html or text mode.
+	 * if there is not set third param to use force html or text mode.
 	 * @param bool $alwaysHtmlMode
 	 * @return \MvcCore\Ext\Views\Helpers\TruncateHelper
 	 */
@@ -87,9 +87,9 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * or truncate simple text without any HTML tags.
 	 * Clean all possible punctuation and brackets before three dots: `',.:;?!+"\'-–()[]{}<>=$§ '`.
 	 * @param string $text		Text content or html content to truncate.
-	 * @param int $maxChars		Max text chars or max html content chars.
-	 * @param bool|NULL $isHtml	If `TRUE`, first param will be forcely truncated in html mode,
-	 *							If `FALSE`, first param will be forcely truncated in text mode,
+	 * @param int $maxChars		Max text chars or max. html content chars.
+	 * @param bool|NULL $isHtml	If `TRUE`, first param will be force truncated in html mode,
+	 *							If `FALSE`, first param will be force truncated in text mode,
 	 *							If `NULL`, there is used possibly configured property
 	 *							`\MvcCore\Ext\View\Helpers\::$alwaysHtmlMode` and if not configured,
 	 *							there is automatically detected if first param contains any html tag(s).
@@ -121,7 +121,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 		$texts = [];
 		$index = 0;
 		$charsCount = 0;
-		// explode all html content to array with text ocontents and html tags
+		// explode all html content to array with text contents and html tags
 		while (TRUE) {
 			$openTagPos = mb_strpos($text, '<', $index);
 			if ($openTagPos === FALSE) {
@@ -187,7 +187,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * Clean all possible punctuation and brackets before three dots: `',.:;?!+"\'-–()[]{}<>=$§ '`.
 	 * @param string $text
 	 * @param int $maxChars
-	 * @return string
+	 * @return void
 	 */
 	protected function truncateText (& $text, $maxChars) {
 		if (mb_strlen($text) > $maxChars) {
