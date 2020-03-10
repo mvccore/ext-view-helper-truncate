@@ -67,7 +67,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * @param bool   $forHtmlText
 	 * @return \MvcCore\Ext\Views\Helpers\TruncateHelper
 	 */
-	public function & SetThreeDotsText ($threeDotsText = '&hellip;', $forHtmlText = TRUE) {
+	public function SetThreeDotsText ($threeDotsText = '&hellip;', $forHtmlText = TRUE) {
 		$this->threeDotsTexts[$forHtmlText ? 1 : 0] = $threeDotsText;
 		return $this;
 	}
@@ -78,7 +78,7 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 * @param bool $alwaysHtmlMode
 	 * @return \MvcCore\Ext\Views\Helpers\TruncateHelper
 	 */
-	public function & SetAlwaysHtmlMode ($alwaysHtmlMode = TRUE) {
+	public function SetAlwaysHtmlMode ($alwaysHtmlMode = TRUE) {
 		$this->alwaysHtmlMode = $alwaysHtmlMode;
 		return $this;
 	}
