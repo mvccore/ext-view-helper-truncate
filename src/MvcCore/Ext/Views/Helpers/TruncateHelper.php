@@ -202,5 +202,6 @@ class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 				$text = mb_substr($text, 0, $lastSpacePos) . $threeDotsText;
 			}
 		}
+		return $text;
 	}
 }
