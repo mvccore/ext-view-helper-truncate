@@ -3,20 +3,20 @@
 	"type": "library",
 	"description": "MvcCore - Extension - View - Helper - Truncate - truncate plain text or text with html tags to max. chars.",
 	"keywords": [
-		"mvc", 
-		"mvccore", 
-		"framework", 
-		"extension", 
-		"plugin", 
-		"plug-in", 
-		"ext", 
-		"view", 
-		"helper", 
-		"viewhelper", 
-		"text", 
-		"truncate", 
-		"three dots", 
-		"dots", 
+		"mvc",
+		"mvccore",
+		"framework",
+		"extension",
+		"plugin",
+		"plug-in",
+		"ext",
+		"view",
+		"helper",
+		"viewhelper",
+		"text",
+		"truncate",
+		"three dots",
+		"dots",
 		"cut text"
 	],
 	"license": ["BSD-3-Clause"],
@@ -26,10 +26,12 @@
 	}],
 	"require": {
 		"php": ">=5.4.0",
-		"mvccore/ext-view-helper": "dev-master"
+		"mvccore/ext-view-helper": "^5.0"
 	},
 	"autoload": {
-		"classmap": ["src/"]
+		"classmap": [
+			"src/"
+		]
 	},
 	"minimum-stability": "dev"
 }
