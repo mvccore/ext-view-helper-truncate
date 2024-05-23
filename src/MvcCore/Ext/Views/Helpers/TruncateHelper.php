@@ -19,7 +19,7 @@ namespace MvcCore\Ext\Views\Helpers;
  * - Possibility to setup custom chars for three dots,
  *   html entity `&hellip;` by default, for plain text `...` by default.
  * - Possibility to set default truncating method, if third param to define is not set.
- * @method \MvcCore\Ext\Views\Helpers\TruncateHelper GetInstance()
+ * @method static \MvcCore\Ext\Views\Helpers\TruncateHelper GetInstance()
  */
 class TruncateHelper extends \MvcCore\Ext\Views\Helpers\AbstractHelper {
 
