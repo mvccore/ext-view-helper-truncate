@@ -34,5 +34,6 @@
 			"src/"
 		]
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
